@@ -1,12 +1,12 @@
 package com.example.sakila.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +14,8 @@ import java.util.List;
 @Table(name = "film")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,4 +52,13 @@ public class Film {
             inverseJoinColumns = {@JoinColumn(name = "category_id")}
     )
     private List<PartialCategory> films = new ArrayList<>();
+
+    public Film(short nId, String nTitle, byte nLanguageId, byte nRentalDuration, java.math.BigDecimal nRentalRate, java.math.BigDecimal nReplacementCost) {
+        id = nId;
+        title = nTitle;
+        languageId = nLanguageId;
+        rentalDuration = nRentalDuration;
+        rentalRate = nRentalRate;
+        replacementCost = nReplacementCost;
+    }
 }

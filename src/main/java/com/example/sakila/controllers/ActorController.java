@@ -12,6 +12,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.ResourceAccessException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -104,6 +105,6 @@ public class ActorController {
         if (!actorRepository.findByLastNameIgnoreCase(name).isEmpty()) {
             return actorRepository.findByLastNameIgnoreCase(name);
         }
-        return null;
+        return new ArrayList<>();
     }
 }

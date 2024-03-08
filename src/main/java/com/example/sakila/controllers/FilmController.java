@@ -1,10 +1,7 @@
 package com.example.sakila.controllers;
 
-import com.example.sakila.entities.Actor;
 import com.example.sakila.entities.Film;
 import com.example.sakila.entities.PartialActor;
-import com.example.sakila.entities.PartialFilm;
-import com.example.sakila.input.ActorInput;
 import com.example.sakila.input.FilmInput;
 import com.example.sakila.input.ValidationGroup;
 import com.example.sakila.repositories.ActorRepository;

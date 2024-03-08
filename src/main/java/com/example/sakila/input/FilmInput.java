@@ -16,7 +16,7 @@ public class FilmInput {
     private Byte languageId;
 
     @NotNull(groups = ValidationGroup.Create.class)
-    private Byte RentalDuration;
+    private Byte rentalDuration;
 
     @NotNull(groups = ValidationGroup.Create.class)
     private java.math.BigDecimal rentalRate;
